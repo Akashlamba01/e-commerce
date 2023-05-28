@@ -36,7 +36,7 @@ exports.updateProduct = async (req, res) => {
   try {
     // console.log("id: ", req.params.id);
     let product = await ProductModel.findById(req.params.id);
-    console.log(product);
+    // console.log(product);
     if (!product) {
       return resp.notFound(res, "No Product Available in DataBase!");
     }
