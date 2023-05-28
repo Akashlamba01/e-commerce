@@ -4,8 +4,10 @@ In this project have only one admin that can manage all the product.
 
 ## Prerequisites
 
-- Node.js (version 18.15.0)
+- Node.js (version 18.15.0) with express (version 4.18.2) freamwork
+- Celebrate (version 15.0.1) with Joi (version 17.9.2)
 - MongoDB (version 7.2.0)
+- JsonWebToken ( version 9.0.0)
 
 ## Getting Started
 
