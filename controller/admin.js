@@ -1,5 +1,5 @@
-const AdminModel = require("../../models/admin");
-const { resp } = require("../../utility/response");
+const AdminModel = require("../models/admin");
+const { resp } = require("../utility/response");
 const jwt = require("jsonwebtoken");
 const md5 = require("md5");
 

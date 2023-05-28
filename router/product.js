@@ -1,8 +1,8 @@
 const express = require("express");
 const router = express.Router();
-const productController = require("../../controller/apiv1/product");
+const productController = require("../controller/product");
 const { Joi, celebrate } = require("celebrate");
-const auth = require("../../config/middleware");
+const auth = require("../config/middleware");
 
 router.post(
   "/create",
@@ -16,7 +16,7 @@ router.post(
   productController.addProduct
 );
 
-router.get("/", auth.verifyToken, productController.getProduct);
+router.get("/", productController.getProduct);
 
 router.post(
   "/:id/update_quantity/",

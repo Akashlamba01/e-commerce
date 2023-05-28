@@ -1,5 +1,5 @@
-const ProductModel = require("../../models/product");
-const { resp } = require("../../utility/response");
+const ProductModel = require("../models/product");
+const { resp } = require("../utility/response");
 
 exports.addProduct = async (req, res) => {
   try {
@@ -34,8 +34,9 @@ exports.getProduct = async (req, res) => {
 
 exports.updateProduct = async (req, res) => {
   try {
+    // console.log("id: ", req.params.id);
     let product = await ProductModel.findById(req.params.id);
-    // console.log(product);
+    console.log(product);
     if (!product) {
       return resp.notFound(res, "No Product Available in DataBase!");
     }
@@ -52,7 +53,9 @@ exports.updateProduct = async (req, res) => {
       }
     );
 
-    console.log("updated product: ", product);
+    await product.save();
+
+    // console.log("updated product: ", product);
     return resp.success(res, "Updated Successfully!", product);
   } catch (error) {
     console.log(error);

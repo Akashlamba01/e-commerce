@@ -1,6 +1,8 @@
 const express = require("express");
 require("dotenv").config();
 require("./config/db");
+const ejs = require("ejs");
+
 const { errors } = require("celebrate");
 const bodyParser = require("body-parser");
 const path = require("path");
@@ -12,7 +14,7 @@ app.use(express.urlencoded());
 app.use(bodyParser.json());
 
 app.set("view engine", "ejs");
-app.set("views", path.join(__dirname, "views"));
+app.set("views", path.join(__dirname, "./views"));
 
 app.use("/", require("./router"));
 

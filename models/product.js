@@ -4,9 +4,11 @@ const productSchema = new mongoose.Schema(
   {
     name: {
       type: String,
+      default: "",
     },
     quantity: {
       type: Number,
+      default: null,
     },
   },
   {

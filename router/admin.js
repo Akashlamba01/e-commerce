@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const adminController = require("../../controller/apiv1/admin");
+const adminController = require("../controller/admin");
 const { Joi, celebrate } = require("celebrate");
 
 router.post(

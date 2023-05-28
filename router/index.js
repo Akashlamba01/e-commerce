@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
 
-router.use("/api/v1", require("./apiv1"));
+router.use("/admin", require("./admin"));
+router.use("/products", require("./product"));
 
 module.exports = router;
